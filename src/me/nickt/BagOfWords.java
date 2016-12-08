@@ -4,10 +4,10 @@ import java.util.*;
 
 public class BagOfWords {
 
-    private List<String> orderedUniqueWords = new ArrayList<>();
+    private List<String> orderedUniqueWords = new ArrayList<String>();
 
     public BagOfWords(Sentence sentence) {
-        Set<String> bag = new HashSet<>();
+        Set<String> bag = new HashSet<String>();
         for (String word : sentence.wordArray()) {
             bag.add(word.toLowerCase());
         }

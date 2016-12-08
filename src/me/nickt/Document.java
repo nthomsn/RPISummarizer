@@ -11,6 +11,10 @@ import java.util.Collections;
 import java.util.List;
 
 public class Document {
+    public List<Sentence> getSentenceList() {
+        return new ArrayList(sentenceList);
+    }
+
     /**
      * An immutable collection of text to be summarized.
      * It is an ordered list of sentences.
@@ -59,7 +63,7 @@ public class Document {
      * Convert a string into a list of sentences by using the coreNLP preprocessor.
      */
     private List<Sentence> textToSentenceList(String text) {
-        List<Sentence> sentenceList = new ArrayList<>();
+        List<Sentence> sentenceList = new ArrayList<Sentence>();
         Reader reader = new StringReader(text);
         DocumentPreprocessor dp = new DocumentPreprocessor(reader);
         for (List<HasWord> coreNLPSentence : dp) {

@@ -1,5 +1,7 @@
 package me.nickt;
 
+import me.nickt.summarizers.BestGraphSummarizerEver;
+import me.nickt.summarizers.GraphSummary;
 import me.nickt.summarizers.RandomSummary;
 import me.nickt.utils.IOUtils;
 
@@ -13,7 +15,7 @@ public class Main {
         String inputString = IOUtils.fileToString(INPUT_FILE);
         Document inputDoc = new Document(inputString);
         System.out.println(inputDoc);
-        inputDoc.printSummary(new RandomSummary(), 3);
+        inputDoc.printSummary(new BestGraphSummarizerEver(), 3);
 
     }
 }
