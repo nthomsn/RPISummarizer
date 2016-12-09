@@ -18,6 +18,7 @@ import java.util.*;
 
 /**
  * Created by John on 12/6/2016.
+ * Has the ability to take a set of sentences and order them from most important to least important
  */
 public class BestGraphSummarizerEver implements Summarizer{
 
